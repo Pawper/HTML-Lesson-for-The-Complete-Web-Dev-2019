@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Page | HTML Lesson</title>
+</head>
+<body>
+  <header>
+    <h1>
+      Form Page
+    </h1>
+  </header>
+  <!-- Use GET not POST -->
+  <form method="GET">
+    <label>First Name: <input type="text" name="firstname"></label><br>
+    <label>Last Name: <input type="text" name="lastname"></label><br>
+    <label>Email: <input type="email" name="email"></label><br>
+    <label>Password: <input type="password" name="password" minlength="8"></label><br>
+    <label>Birthday: <input type="date" name="birthday"></label><br>
+    Gender:<br>
+    <label><input type="checkbox" name="Nonbinary" >Nonbinary</label><br>
+    <label><input type="checkbox" name="Female" >Female</label><br>
+    <label><input type="checkbox" name="Male" >Male</label><br>
+    <label><input type="checkbox" name="Other" >Other: <input type="text" name="OtherGender"></label><br>
+    Operating System:<br>
+    <label><input type="radio" name="OS"> Windows <label><input type="checkbox" name="WSL">Subsystem for Linux</label><br></label>
+    <label><input type="radio" name="OS"> Mac<br></label>
+    <label><input type="radio" name="OS"> Linux<br></label>
+    <label>Editor: <br>
+      <select name="editor">
+        <option value="VS Code">VS Code </option>
+        <option value="Sublime">Sublime</option>
+        <option value="Atom">Atom</option>
+      </select>
+    </label><br>
+    <input type="submit" value="Register 🙌"><input type="reset" value="Reset 🔃">
+  </form><br>
+  <nav>
+    <a href="index.html">⮐ Return to Index</a>
+  </nav>
+</body>
+</html>
+
+<!-- 
+NO VALUE ATTRIBUTE ON CHECKBOXES: Checkbox submits "on"
+firstname=Phillip&lastname=Wessels&email=hey%40pawper.dev&password=12345678&birthday=4567-01-23&Other=on&OtherGender=TEST&OS=on&WSL=on&editor=VS+Code
+
+VALUE ATTRIBUTE ON CHECKBOXES: Checkbox submits what I put as its value
+firstname=Phillip&lastname=Wessels&email=hey%40pawper.dev&password=12345678&birthday=4567-01-23&Other=Other&OtherGender=TEST&OS=on&WSL=on&editor=VS+Code
+
+-->
